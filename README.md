@@ -212,6 +212,7 @@ These are technologies used across my projects, coursework, and experimentation�
 
 ### Backend engineering & system design
 
+- Distributed systems architecture: Base62 URL shortener with Single-Flight cache stampede mitigation, 5-algorithm rate limiter with hot-key sharding, multi-node WebSocket chat scaling via Redis Pub/Sub backplane, hybrid fan-out social news feed with cursor pagination, and high-concurrency ticket booking engine with OCC CAS versioning and Saga compensation.
 - Application factories, blueprints/routers, layered services, and multi-role applications.
 - Authentication and authorization: JWT, sessions, role-based access control, and tenant-aware access patterns.
 - Cache-aside patterns, cache invalidation, background task queues, scheduled jobs, and asynchronous exports.
@@ -236,6 +237,75 @@ These are technologies used across my projects, coursework, and experimentation�
 ---
 
 <!-- PROFILE README — PART 3/4: FEATURED PROJECTS -->
+## 🏛️ Distributed Systems & High-Level Design (HLD) Portfolio
+
+> **5 Production-Grade Backend Architectures solving real-world concurrency, traffic shaping, and distributed state challenges for System Design Interviews.**  
+> **Master Portfolio Monorepo:** [hld-distributed-systems-portfolio](https://github.com/Jainparth22/hld-distributed-systems-portfolio) · FastAPI · WebSockets · Redis Pub/Sub · SQLite/PostgreSQL · Docker Compose
+
+<table>
+  <thead>
+    <tr>
+      <th width="28%">System</th>
+      <th width="48%">Core Distributed Architecture & Patterns</th>
+      <th width="24%">Repository</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><b>🔗 Distributed URL Shortener</b></td>
+      <td>
+        • Base62 Encoding with collision probe offset<br>
+        • LRU Cache with TTL + <b>Single-Flight</b> coroutine deduplication (stampede prevention)<br>
+        • SQLite persistent index + <b>Cryptographic JWT Bearer Auth</b><br>
+        • Non-blocking asynchronous analytics queue
+      </td>
+      <td><a href="https://github.com/Jainparth22/distributed-url-shortener"><b>distributed-url-shortener</b></a></td>
+    </tr>
+    <tr>
+      <td><b>🚦 Distributed Rate Limiter</b></td>
+      <td>
+        • <b>5 Algorithmic Engines:</b> Token Bucket, Leaky Bucket, Sliding Window Counter, Sliding Window Log, Fixed Window<br>
+        • <b>Dual-Engine:</b> Distributed Redis (<code>redis.asyncio</code>) with atomic in-memory CAS fallback<br>
+        • Hot-key traffic detection dynamically sharded across virtual partitions<br>
+        • Switchable Fail-Open / Fail-Closed availability modes
+      </td>
+      <td><a href="https://github.com/Jainparth22/distributed-rate-limiter"><b>distributed-rate-limiter</b></a></td>
+    </tr>
+    <tr>
+      <td><b>💬 Scalable Real-Time Chat</b></td>
+      <td>
+        • Persistent bidirectional <b>WebSockets</b><br>
+        • <b>Horizontal Scaling Backplane:</b> Multi-node Redis Pub/Sub cluster (<code>chat:rooms:*</code>) with auto-reconnect & local fallback<br>
+        • <b>Transactional Outbox Pattern</b> ensuring zero message drops<br>
+        • Monotonic 64-bit sequence counters + Offline queue & reconnect replay + 30s heartbeat presence
+      </td>
+      <td><a href="https://github.com/Jainparth22/scalable-realtime-chat"><b>scalable-realtime-chat</b></a></td>
+    </tr>
+    <tr>
+      <td><b>📰 Scalable News Feed Engine</b></td>
+      <td>
+        • <b>Fan-out-on-Write vs Read vs Hybrid</b> architecture<br>
+        • Celebrity thresholding mitigating write amplification<br>
+        • Deterministic <b>O(1) cursor-based pagination</b> (zero OFFSET scanning penalties)<br>
+        • Multi-factor engagement ranking engine (time-decay + likes/comments)
+      </td>
+      <td><a href="https://github.com/Jainparth22/scalable-newsfeed-system"><b>scalable-newsfeed-system</b></a></td>
+    </tr>
+    <tr>
+      <td><b>🎟️ High-Concurrency Ticket Booking</b></td>
+      <td>
+        • <b>Optimistic Concurrency Control (OCC CAS versioning)</b> & Pessimistic row locking<br>
+        • Two-phase seat reservation with 5-minute expiring holds (TOCTOU race prevention)<br>
+        • <b>Distributed Saga Orchestrator</b> with automated compensating rollbacks on payment failure<br>
+        • Stripe / Razorpay compatible asynchronous payment webhook receiver
+      </td>
+      <td><a href="https://github.com/Jainparth22/high-concurrency-ticket-booking"><b>high-concurrency-ticket-booking</b></a></td>
+    </tr>
+  </tbody>
+</table>
+
+---
+
 ## Featured projects
 
 These projects represent the main threads of my CS journey: backend and full-stack systems, data/ML pipelines, and modern AI applications. Open each repository for source, architecture, notebooks, and implementation notes.
