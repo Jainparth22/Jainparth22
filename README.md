@@ -38,7 +38,7 @@ I build backend services that stay correct under concurrency and keep running wh
 | [News feed](https://github.com/Jainparth22/scalable-newsfeed-system) | Push, pull and hybrid fan-out, cursor pagination |
 | [Ticket booking](https://github.com/Jainparth22/high-concurrency-ticket-booking) | Optimistic locking, expiring holds, saga with compensation |
 
-These run locally; payments and some storage are simulated, and the READMEs say so.
+These run locally; payments and some storage are simulated.
 
 ## How I work
 
