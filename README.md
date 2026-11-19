@@ -62,6 +62,20 @@ These run locally; payments and some storage are simulated, and the READMEs say 
 - MPOnline (Govt. of MP and TCS JV) AI/ML and software engineering internship, May to Jul 2026
 - 950+ day GeeksforGeeks streak, 200+ LeetCode problems
 
+## Coding streaks
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=Jainparth22&hide_border=true&theme=default" alt="GitHub streak" height="170" />
+</p>
+
+<p align="center">
+  <a href="https://leetcode.com/u/jain22parth/"><img src="https://leetcard.jacoblin.cool/jain22parth?theme=light&font=Karma&ext=heatmap" alt="LeetCode stats and heatmap" width="520" /></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/GeeksforGeeks-950%2B%20day%20streak-2F8D46?style=for-the-badge" alt="GeeksforGeeks 950+ day streak" />
+</p>
+
 ## Contact
 
 [parthjain0722@gmail.com](mailto:parthjain0722@gmail.com)  |  [LinkedIn](https://www.linkedin.com/in/jainparth22)  |  [Portfolio](https://porfoliosample-zeta.vercel.app/)
